@@ -1,0 +1,100 @@
+        body{ margin:0px;}
+        /* initialize flexbox container and flexbox items */
+        
+/*TEXT DEFINE*/
+
+a {color: mediumorchid;}
+figcaption {display: block; font-family: 'Play', sans-serif; font-size: 12px; font-style: italic; color: #fbfbfb;}
+p {font-family: 'Cabin', sans-serif; font-size: 12px; line-height: 8px; text-align: center;}
+.fc section p {font-family: 'Cabin', sans-serif; color: #fbfbfb; line-height: 23px; font-size: 14px;}
+.fc content ul,ol {font-family: 'Cabin', sans-serif; font-size: 14px; line-height: 20px;}
+.fc section ol {font-family: 'Cabin', sans-serif; text-align: left; color: #fbfbfb;}
+header h1 {font-family: 'Play', sans-serif; color: #fbfbfb; font-size: 40px;}
+.fc content h1 {font-family: 'Play', sans-serif; color: #d15235; font-size: 26px; text-align: center;}
+.fc content p {font-family: 'Cabin', sans-serif; font-size: 12px; line-height: 8px; text-align: center;}
+.fc content h2 {font-family: 'Play', sans-serif; color: #d15235; font-size: 20px;}
+.fc content h3 {font-family: 'Play', sans-serif; color: #0b0b0b; font-size: 14px; line-height: inherit;}
+.fc section h3 {font-family: 'Play', sans-serif; color: #fbfbfb; font-size: 20px;}
+.fc content h4 {font-family: 'Play', sans-serif; color: #0b0b0b; font-size: 14px; font-style: italic; line-height: 8px;}
+footer {font-family: 'Play', sans-serif;}
+.fc content .reg {font-family: 'Cabin', sans-serif; font-size: 14px; text-align: left; padding-left: 20px; line-height: inherit;}
+.info {font-family: 'Cabin', sans-serif; text-align: left;}
+.fc div.desc {padding: 15px; font-family: 'Play', sans-serif; color: #551242; text-align: center; font-size: 12px; text-align: left; background-color: white;}
+hr {display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: auto; margin-right: auto; border-style: inset; border-width: 1px;}
+table {font-family: 'Play', sans-serif; font-size: 14px;}
+
+        .fc > *{
+            margin:5px;
+            padding:20px; 
+            border-radius: 5px;
+            flex:1;
+            min-width: 100px;
+        }
+
+        .fc {display: flex; flex-flow: row wrap; min-height: calc(100vh - 193px);}
+            /* ensure flex-container is always at least as tall as the viewport, minus the height of the header and footer combined. */
+        
+        .fc content {
+            flex:3;
+            /*background-image: url(images/sky.jpg);
+            background-size:cover;*/
+            background-color: #fbfbe0;
+            width: inherit;
+            height: 37em;
+            overflow: auto;
+        }
+
+/*TABLES*/
+    /*Impact Assessment Tables*/
+        table, th, td {border: 1px solid black; border-collapse: collapse; border-spacing: 5px;}
+        table {background-color: white;}
+        th {background-color: lightgrey; text-align: left;}
+        th, td {padding:5px; vertical-align: top;}
+
+/*GALLERY on TRAIN PAGE*/
+        .fc div.gallery {margin: 5px; border: 1px solid #551242; float: left; width:180px; background-color: white;}
+        .fc div.gallery:hover {border: 1px solid #d15235;}
+        .fc div.gallery img {width: 100%; height:auto;}
+        ul.tc {list-style-type: none; margin: 0; padding: 0;}
+
+/*NAVIGATION BAR*/
+        .fc aside {flex: 0.5; background-image: url(images/purple.png); background-size: cover; background-color: #551242;}
+        
+        li a.active {background-color: #d15235; color: white;}
+        li a:hover:not(.active) {background-color: #ea9974; color: white;}
+        
+        .nav {list-style-type: none; margin: 0; padding: 0; width: inherit; height: inherit; overflow:auto;}
+        
+        li a{font-family: 'Play', sans-serif; line-height: 20px; display: block; color: #fbfbfb; padding: 8px 16px; text-decoration: none; text-align: center;}
+        
+/*RIGHT SIDE PANEL*/
+        .fc section {background-color: #551242; font-size: 14px; text-align: center; width: inherit; height: 42.5em; overflow: auto;}
+        .fc section img {border: 1px solid white; overflow: hidden; max-height: 40%; max-width: 60%;}
+
+/*HEADER AND FOOTER*/
+        header {border-bottom: 10px solid #d15235; padding-bottom: 10px;}
+        /* size header and footer to be full width and 100 px tall each */
+        header{
+            box-sizing: border-box;
+            width: 98vw;
+            height: 100px;
+            margin:5px;
+            padding:2px; 
+            background-color:#142950;
+            border-radius: 5px;
+            padding-left: 10%;
+            padding-bottom: 7%;
+            color: #fbfbfb;
+        }
+    
+        footer {
+            box-sizing: border-box;
+            width: 98vw;
+            height: 35px;
+            margin:5px;
+            padding:2px; 
+            background-color:#142950;
+            border-radius: 5px;
+            padding-bottom: 2%;
+            color: #fbfbfb;
+        }

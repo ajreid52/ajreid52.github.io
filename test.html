@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Test Case Samples</title>
+</head>
+
+<body>
+    <header><h1>Resume and Work Samples</h1></header>
+    <div class="fc">
+        <aside>
+            <ul class="nav">
+                <li><a href="index.html">Work Experience</a></li>
+                <li><a href="ed.html">Training</a></li>
+                <li><a href="notes.html">External Release Notes</a></li>
+                <li><a href="notes2.html">Technical Release Notes</a></li>
+                <li><a href="ia.html">Impact Assessment</a></li>
+                <li><a class="active" href="test.html">General Testing</a></li>
+                <li><a href="guide.html">User Manual</a></li>
+            </ul>
+        </aside>
+        <content>
+            <h1>Broad General Testing Sample</h1>
+            <h2>Sample 4: Sanity Checking</h2>
+            <h3>AUDIENCE AND PURPOSE: Exploratory and Formal Testing are not within scope of this type of testing.  However, sometimes critical areas of a system or end user experience are expected to be greatly impacted by release changes.  If so, other teams such as documentation may deem that the release requires a bit of sanity checking should be done to ensure that, from the end user's perspective, the changes will not inhibit or greatly inconvenience their usual workflow and will still behave as expected.  The testing is performed based on the score from the Impact Assessment.  Tests may consist of a written expectation and bundle of screenshots taken as evidence for audits.</h3>
+            <p class="reg">Per Documentation Team: Minimal and Low do not require testing.  Medium and High require testing.</p>
+            <h4>Impact Assessment Outcome</h4>
+            <table style="width:50em">
+                <tr>
+                    <th colspan="2">MED-023: Specialization Home Page for Sites</th>
+                </tr>
+                <tr>
+                    <th>Score</th>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <th>Tests</th>
+                    <td><ul>
+                        <li>Confirm users can navigate between new and original tabs</li>
+                        <li>Confirm Search on new Specialty Page works</li>
+                    </ul></td>
+                </tr>
+            </table>
+            <hr>
+            <h3>SANITY CHECK SPECIFICATION</h3>
+            <table style="width:50em">
+                <tr>
+                    <th colspan="4">Test Case 1: Login with Supported Browsers</th>
+                </tr>
+                <tr>
+                    <th colspan="4">Location: Logins > IE / FF / CH Respectively</th>
+                </tr>
+                <tr>
+                    <td colspan="4">NOTES: Perform once for Internet Explorer v11, Mozilla Firefox vCurrent, and once for Google Chrome vCurrent.</td>
+                </tr>
+                <tr>
+                    <th>TC#</th>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Outcome</th>
+                </tr>
+                <tr>
+                    <td>Test Case 1.001</td>
+                    <td><ul class="tc"><li>Given an active end user on the Login page</li>
+                        <li>And the user enters valid user ID</li>
+                        <li>And the user enters valid password</li>
+                        <li>And the user clicks the Login button</li>
+                        </ul></td>
+                    <td>Then the Home Page is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 1.002</td>
+                    <td><ul class="tc"><li>Given a user on the Home page</li>
+                        <li>And the user clicks on the My Profile link</li>
+                        </ul></td>
+                    <td>Then the My Profile page is displayed.</td>
+                    <td>Fail</td>
+                </tr>
+                <tr>
+                    <td>Test Case 1.003</td>
+                    <td><ul class="tc"> <li>Given a user on the My Profile page</li>
+                        <li>And the user updates one field</li>
+                        <li>And the user clicks the Update button</li>
+                    </ul></td>
+                    <td>Then the field information is updated.</td>
+                    <td>Fail</td>
+                </tr>
+                <tr>
+                    <td>Test Case 1.004</td>
+                    <td><ul class="tc"> <li>Given a user on the My Profile page</li>
+                        <li>And the user clicks on the News link</li>
+                    </ul></td>
+                    <td>Then the News page is displayed</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 1.005</td>
+                    <td><ul class="tc"> <li>Given a user on the News page</li>
+                        <li>And the user clicks on the v2.1.0 External Release Notes PDF text link</li>
+                    </ul></td>
+                    <td>Then the new Release Notes can be downloaded and opened.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 1.006</td>
+                    <td><ul class="tc"> <li>Given a user on the News page</li>
+                        <li>And the user clicks the Logout button</li>
+                    </ul></td>
+                    <td>Then the Login page is displayed, the user is logged out, and the logout ticker message is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+            </table>
+            <br>
+            <table style="width:50em">
+                <tr>
+                    <th colspan="4">Test Case 2: Access All Tabs</th>
+                </tr>
+                <tr>
+                    <th colspan="4">Location: MED023 > TC2_ACCESS</th>
+                </tr>
+                <tr>
+                    <th>TC#</th>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Outcome</th>
+                </tr>
+                <tr>
+                    <td>Test Case 2.001</td>
+                    <td><ul class="tc"><li>Given a user on the News page</li>
+                            <li>And the user's site is identified as a Specialization site in Admin</li>
+                            <li>And the user clicks on the Home page</li>
+                        </ul></td>
+                    <td>Then the Specialty home page is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 2.002</td>
+                    <td><ul class="tc"><li>Given a user on the Specialty home page</li>
+                            <li>And the user clicks on the Reports tab</li>
+                        </ul></td>
+                    <td>Then the Reports page is displayed with the default report displayed on the screen.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 2.003</td>
+                    <td><ul class="tc"><li>Given a user on the Reports page</li>
+                            <li>And the user clicks on a report text link on the page</li>
+                        </ul></td>
+                    <td>Then the report can be downloaded and opened in Excel.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 2.004</td>
+                    <td><ul class="tc"><li>Given a user on the Reports page</li>
+                            <li>And the user clicks on the Products tab</li>
+                        </ul></td>
+                    <td>Then the Products page is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 2.005</td>
+                    <td><ul class="tc"><li>Given a user on the Products page</li>
+                            <li>And the user clicks on a product code text link</li>
+                        </ul></td>
+                    <td>Then the Product Details page for that particular item is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 2.006</td>
+                    <td><ul class="tc"><li>Given a user on the details page for a particular product item</li>
+                            <li>And the user clicks the Add to Shopping Cart button</li>
+                        </ul></td>
+                    <td>Then the item is added to the shopping cart and the shopping cart icon displays 1 in parentheses.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 2.007</td>
+                    <td><ul class="tc"><li>Given a user on the details page for a particular product item</li>
+                            <li>And the user clicks on the Shopping Cart tab</li>
+                        </ul></td>
+                    <td>Then the Shopping Cart page is displayed and the previously added item is listed in the table.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 2.008</td>
+                    <td><ul class="tc"><li>Given a user on the Shopping Cart page</li>
+                            <li>And the user clicks the trash can icon next to the added item</li>
+                        </ul></td>
+                    <td>Then the page is updated and the item is removed from the Shopping Cart list.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 2.009</td>
+                    <td><ul class="tc"><li>Given a user on the Shopping Cart page</li>
+                            <li>And the user clicks on the Support tab</li>
+                        </ul></td>
+                    <td>Then the Support page is displayed with the link to Live Chat and International Phone Number list.</td>
+                    <td>Pass</td>
+                </tr>
+            </table>
+            <br>
+            <table style="width:50em">
+                <tr>
+                    <th colspan="4">Test Case 3: Confirm Search Function on New Page</th>
+                </tr>
+                <tr>
+                    <th colspan="4">Location: MED023 > TC3_SEARCH</th>
+                </tr>
+                <tr>
+                    <th>TC#</th>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Outcome</th>
+                </tr>
+                <tr>
+                    <td>Test Case 3.001</td>
+                    <td><ul class="tc"><li>Given a user on the Support page</li>
+                        <li>And the user's site is identified as a Specialization site in Admin</li>
+                        <li>And the user clicks on the Home page</li>
+                    </ul></td>
+                    <td>Then the Specialty home page is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 3.002</td>
+                    <td><ul class="tc"><li>Given a user on the Specialty home page</li>
+                        <li>And the user enters a product name such as 'catheter' into the Search box</li>
+                        <li>And the user clicks on the Search button</li>
+                    </ul></td>
+                    <td>Then the Results page is displayed with several entries in the table.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 3.003</td>
+                    <td><ul class="tc"><li>Given a user on the Search Results page</li>
+                        <li>And the user clicks on the Clear Search button</li>
+                    </ul></td>
+                    <td>Then the page is refreshed and the table is empty, and the search bar at the top is empty.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 3.004</td>
+                    <td><ul class="tc"><li>Given a user on the empty Search Results page</li>
+                        <li>And the user enters a different product name into the Search box</li>
+                        <li>And the user clicks on the Search button</li>
+                    </ul></td>
+                    <td>Then the Results page is displayed with several entries in the table.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 3.005</td>
+                    <td><ul class="tc"><li>Given a user on the Search Results page</li>
+                        <li>And the user clicks on one of the item entries in the Results table</li>
+                    </ul></td>
+                    <td>Then the product details page for the selected item is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+            </table>
+            <br>
+            <table style="width:50em">
+                <tr>
+                    <th colspan="4">Test Case 4: Access All Tabs - Retest</th>
+                </tr>
+                <tr>
+                    <th colspan="4">Location: Retest Login > CH</th>
+                </tr>
+                <tr>
+                    <td colspan="4">NOTES: Retest performed for Chrome which failed because the cache was holding the last login credentials and needed to be reset.  Firefox and IE both passed initially.</td>
+                </tr>
+                <tr>
+                    <th>TC#</th>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>Outcome</th>
+                </tr>
+                <tr>
+                <td>Test Case 4.001</td>
+                <td><ul class="tc"><li>Given an active end user on the Login page</li>
+                        <li>And the user enters valid user ID</li>
+                        <li>And the user enters valid password</li>
+                        <li>And the user clicks the Login button</li>
+                        </ul></td>
+                    <td>Then the Home Page is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 4.002</td>
+                    <td><ul class="tc"><li>Given a user on the Home page</li>
+                        <li>And the user clicks on the My Profile link</li>
+                        </ul></td>
+                    <td>Then the My Profile page is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 4.003</td>
+                    <td><ul class="tc"> <li>Given a user on the My Profile page</li>
+                        <li>And the user updates one field</li>
+                        <li>And the user clicks the Update button</li>
+                    </ul></td>
+                    <td>Then the field information is updated.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 4.004</td>
+                    <td><ul class="tc"> <li>Given a user on the My Profile page</li>
+                        <li>And the user clicks on the News link</li>
+                    </ul></td>
+                    <td>Then the News page is displayed</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 4.005</td>
+                    <td><ul class="tc"> <li>Given a user on the News page</li>
+                        <li>And the user clicks on the v2.1.0 External Release Notes PDF text link</li>
+                    </ul></td>
+                    <td>Then the new Release Notes can be downloaded and opened.</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Test Case 4.006</td>
+                    <td><ul class="tc"> <li>Given a user on the News page</li>
+                        <li>And the user clicks the Logout button</li>
+                    </ul></td>
+                    <td>Then the Login page is displayed, the user is logged out, and the logout ticker message is displayed.</td>
+                    <td>Pass</td>
+                </tr>
+            </table>
+            <br>
+            <h3>Results:</h3>
+            <p class="reg">Post-Release Testing Completed on 30 Aug 2017, 13:45: PASS</p>
+        </content>
+        <section>
+            <a target="_blank" href="images/files.png"><img src="images/files.png" alt="Screencap of folder structure showing bucket folders for each test case." width="300"></a>
+            <figcaption>File Structure of Evidence folder from release testing.</figcaption>
+        </section>
+    </div>
+        <footer><p>Angela Reedy Resume 2017</p></footer>
+</body>
+</html>

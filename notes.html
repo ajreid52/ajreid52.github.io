@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>External Notes</title>
+</head>
+
+<body>
+    <header><h1>Resume and Work Samples</h1></header>
+    <div class="fc">
+        <aside>
+            <ul class="nav">
+                <li><a href="index.html">Work Experience</a></li>
+                <li><a href="ed.html">Training</a></li>
+                <li><a class="active" href="notes.html">External Release Notes</a></li>
+                <li><a href="notes2.html">Technical Release Notes</a></li>
+                <li><a href="ia.html">Impact Assessment</a></li>
+                <li><a href="test.html">General Testing</a></li>
+                <li><a href="guide.html">User Manual</a></li>
+            </ul>
+        </aside>
+        <content>
+            <h1>Release Notes Samples</h1>
+            <h4>Example Release Contents:</h4>
+            <ol>
+                <li>Enhancement Ticket MED-014: Reporting tool upgrade to return monthly, yearly records.  Given an end user, and the user selects monthly for the filter option, then the report displays with the Hospital Name, Product Code, Product Specifications, # Ordered, Expiration Dates, Order Dates, Returned y/n, Re-Order y/n.  Given an admin user and the user selects yearly for the filter option, then the report displays with the Hospital Name, Product Code, Product Specifications, # Ordered, Expiration Dates, Order Dates, # Returns, # Re-Orders, AVG., Offset Date.  Offset date compares previous month/year's Average # per type of items to current month/year's Average # per type of items.  Report only calculates an Offset date if a full previous month or year's records are available.</li>
+                <li>Enhancement Ticket MED-023: New configuration option to add specializations.  Given an admin user, and the user recognizes a hospital specialization - such as heart clinic, pediatric, surgery, imaging, etc. - then admin user can choose from specialization list in client attributes area.  Given a specialization is set for a client, end user gets Specialty Products page instead of regular products home page after login.  All other tabs available as normal but should allow most useful products to display first.</li>
+                <li>Defect Ticket MED-011: Checkout in cart displays error when Product HRTMON-002-Size3 Heart Monitor is in cart.  Item price tag has invalid character listed in the database price chart.  Cart only processes numeric values, but item price in database has $#30.95, # typo in it.  Price tag in database chart updated to reflect current price - $30.95.</li>
+            </ol>
+            <h2>Sample 1: External Release Notes</h2>
+            <h3>AUDIENCE AND PURPOSE: End Users who have a grasp of how to use the search and shopping cart functions, know how to run a report, but only have access to their individual hospital's records.  Defect fixes are not ordinarily entered in External Notes because the fix restores the expected or previous/correct behavior and usually are only encountered by impacted users.</h3>
+            <hr>
+            <br>
+            <h4>External Release Notes</h4>
+            <h4>Product: Fill MEDS Release v2.1.0</h4>
+            <h4>Released: 30 August 2017</h4>
+            <p class="reg">Enhancements are improvements that have been made to the system as a direct result of your feedback.  Updates to existing features do not require any change in set up or configuration, but new features may require set up to implement for your hospital.  Please contact the help center at HelpUS@EasyMED.com for questions about these updates.</p>
+            <h4>UPDATES IN THIS VERSION</h4>
+            <p class="reg">1. MONTHLY AND YEARLY FILTER FOR REPORTS</p>
+            <p class="reg">With the release of v2.1.0, the reporting tool has been updated to add a new filter which can be used to export your site's monthly or yearly records.  This expands the existing sort options by providing a relevant time period that will compare the average number of particular items ordered from month to month, or year to year.  The new filter will be particularly helpful for high-volume purchasers to determine which items are ordered the most, reordered most frequently prior to the next order cycle, and how many tend to expire before they can be used.  The filtered report is exported with columns for your Hosital Name, Product Code, Product Description and Specification, Number of the Product Ordered, Product Expiration Date, Date Ordered, whether the item was Returned, Whether the item was Reordered before the next order cycle, Average of items ordered, and Offset Date which compares the current average to the previous average.  If Monthly filter is used, then the context is for the month, and if yearly, then the context is for the year.</p>
+            <p class ="reg">NOTE: The report only calculates the Offset Date if a previous month or year's records are available.  If not, the filter can be used, but the Offset Date column will be empty.</p>
+            <h4>NEW FEATURES IN THIS VERSION</h4>
+            <p class="reg">1. SPECIALTY SITE HOME PAGE</p>
+            <p class="reg">A new feature has been added with this release that allows your administrator to select a Specialty type for your hospital.  If your site is a Specialist hospital such as a Heart Center, Pediatric Hospital, Imaging Site, or another type of center, you may see a new home page after you login after the release.  The new Product Specialty page contains an assortment of products most relevant to your hospital type to increase the convenience and expediency of your shopping experience.</p>
+        </content>
+        <section> 
+            <h3>Scenario Information</h3>
+            <p class="info">An imaginary company 'Fill MEDS' sells medical supplies conveniently through their website to private hospitals, and their website has a listing of various products with variations in size or measurements depending on the need, a reporting tool that exports past orders to help hospitals keep track of what they use the most of over time, and a shopping cart to purchase the items.</p>
+            <p class="info">The imaginary company Fill MEDS has a release coming up with two enhancements and one bug fix.  The release identifier is x.y.z where x is major release, y is minor release, and z is emergency bug fix.  The identifier for the upcoming release is 2.1.0.</p>
+        </section>
+    </div>
+        <footer><p>Angela Reedy Resume 2017</p></footer>
+</body>
+</html>

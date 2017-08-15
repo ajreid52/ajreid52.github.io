@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Impact Samples</title>
+</head>
+
+<body>
+    <header><h1>Resume and Work Samples</h1></header>
+    <div class="fc">
+        <aside>
+            <ul class="nav">
+                <li><a href="index.html">Work Experience</a></li>
+                <li><a href="ed.html">Training</a></li>
+                <li><a href="notes.html">External Release Notes</a></li>
+                <li><a href="notes2.html">Technical Release Notes</a></li>
+                <li><a class="active" href="ia.html">Impact Assessment</a></li>
+                <li><a href="test.html">General Testing</a></li>
+                <li><a href="guide.html">User Manual</a></li>
+            </ul>
+        </aside>
+        <content>
+            <h1>Impact Assessment Sample</h1>
+            <h2>Sample 3: Impact Assessment</h2>
+            <h3>AUDIENCE AND PURPOSE: Internal documentation for validation of releases, audit visits performed by the customer.  The purpose of the Impact Assessment is to determine the impact to the end user regarding what they see, what they interact with, if set up or interaction needs to change, if the change impacts a critical area of the system, and based on that, assign a score.  Given a particular score, additional testing may need to be done, and user help materials may need to be updated.</h3>
+            <hr>
+            <br>
+            <h4>Impact Assessments</h4>
+            <h4>Release Identifier: Fill MEDS Release v2.1.0</h4>
+            <h4>ENHANCEMENTS</h4>
+            <table style="width:50em">
+                <tr>
+                    <th colspan="2">MED-014: Montly-Yearly Reporting Tool Filter</th>
+                </tr>
+                <tr>
+                    <th>Version</th>
+                    <td>v2.1.0</td>
+                </tr>
+                <tr>
+                    <th>Components</th>
+                    <td>Reports</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>Reporting tool upgrade to return monthly, yearly records.  Given an end user, and the user selects monthly for the filter option, then the report displays with the Hospital Name, Product Code, Product Specifications, # Ordered, Expiration Dates, Order Dates, Returned y/n, Re-Order y/n.  Given an admin user and the user selects yearly for the filter option, then the report displays with the Hospital Name, Product Code, Product Specifications, # Ordered, Expiration Dates, Order Dates, # Returns, # Re-Orders, AVG., Offset Date.  Offset date compares previous month/year's Average # per type of items to current month/year's Average # per type of items.  Report only calculates an Offset date if a full previous month or year's records are available.</td>
+                </tr>
+                <tr>
+                    <th>Impact Score</th>
+                    <td>Low</td>
+                </tr>
+                <tr>
+                    <th>Assessment</th>
+                    <td>
+                        <ul>Factors:</ul>
+                        <li>This change impacts all users because Reports are accessible to all users</li>
+                        <li>Users are not required to use the new feature; filtering is optional</li>
+                        <li>The update does not change the report content, just how it is displayed</li>
+                        <li>Reports are only a display of information, not a storage tool</li>
+                        <li>Reports are exported the same way as before</li>
+                        <ul>Potential Impact Areas:</ul>
+                        <li>Reporting Tool</li>
+                        <ul>Mitigation Plan:</ul>
+                        <li>User Manuals: An update is required to describe how to use the new filtering options and how Offset Date calculation works.</li>
+                        <li>Testing: User impact testing is not required because the filter is just to display and exports.</li>
+                        <ul>Assessment:</ul>
+                        <li>This was assessed as LOW because despite the large scope of users impacted, reports are just a display of information and do not impact the integrity of information stored in the system.  If users could not access a report, the information could still be viewed in the system in Shopping History.  The new option expands on report adaptability and function, but if it is confusing to end users, they are not required to use the new filtering options.</li>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table style="width:50em">
+                <tr>
+                    <th colspan="2">MED-023: Specialization Home Page for Sites</th>
+                </tr>
+                <tr>
+                    <th>Version</th>
+                    <td>v2.1.0</td>
+                </tr>
+                <tr>
+                    <th>Components</th>
+                    <td>Home Page, Specialty Page</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>New configuration option to add specializations.  Given an admin user, and the user recognizes a hospital specialization - such as heart clinic, pediatric, surgery, imaging, etc. - then admin user can choose from specialization list in client attributes area.  Given a specialization is set for a client, end user gets Specialty Products page instead of regular products home page after login.  All other tabs available as normal but should allow most useful products to display first.</td>
+                </tr>
+                <tr>
+                    <th>Impact Score</th>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <th>Assessment</th>
+                    <td>
+                        <ul>Factors:</ul>
+                        <li>Navigation could be impacted for end users</li>
+                        <li>The change requires set up by Administrators, and then by default shows the new Home Page to users at the chosen sites</li>
+                        <li>Search is available from any of the tabs including the new tab</li>
+                        <li>If the Specialty Page did not work, users could still access the product list on other pages instead</li>
+                        <li>A company can contact Support to opt out, but cannot adjust the option on their own</li>
+                        <li>Search and Shopping are not impacted with this change, so user workflow is not impeded</li>
+                        <ul>Potential Impact Areas:</ul>
+                        <li>Home Page</li>
+                        <li>Navigation</li>
+                        <ul>Mitigation Plan:</ul>
+                        <li>User Manuals: An update is required to the internal Admin manual to show the new Specialty box and explain usage of new dropdown options; update is also required to user guide for how to use the new Specialty page.</li>
+                        <li>Testing: User impact testing is required to ensure that navigation between new and original tabs works, and search on Specialty page works.</li>
+                        <ul>Assessment:</ul>
+                        <li>This was assessed as MEDIUM because although workaround options are available, the change could potentially impact user navigation, and Specialty site users will have the new page by default when opted in by the Administrator.  The new page has similar options to the original page, still contains Search, and still has access to the other pages in the system.  The convenience of the new page would be nullified if users could not navigate freely, so testing will be done for the release.  Finally, there is not an easy way to opt out if the change is not desired for a company; it involves contacting support and requiesting the change.  User Manuals will be updated to help mitigate the impact of the new page.</li>
+                    </td>
+                </tr>
+            </table>
+            <h4>DEFECTS</h4>
+            <table style="width:50em">
+                <tr>
+                    <th colspan="2">MED-011: Error When Heart Monitor Sz3 in Cart</th>
+                </tr>
+                <tr>
+                    <th>Version</th>
+                    <td>v2.1.0</td>
+                </tr>
+                <tr>
+                    <th>Components</th>
+                    <td>Shopping Cart, Price Tag List</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>Checkout in cart displays error when Product HRTMON-002-Size3 Heart Monitor is in cart.  Item price tag has invalid character listed in the database price chart.  Cart only processes numeric values, but item price in database has $#30.95, # typo in it.  Price tag in database chart updated to reflect current price - $30.95.</td>
+                </tr>
+                <tr>
+                    <th>Impact Score</th>
+                    <td>Minimal</td>
+                </tr>
+                <tr>
+                    <th>Assessment</th>
+                    <td>
+                        <ul>Factors:</ul>
+                        <li>This primarily impacts a subset of sites; those using cardiac equipment</li>
+                        <li>Only users impacted by the original issue will notice the change</li>
+                        <li>For impacted users, Check Out will work without the error message now</li>
+                        <li>No impact to user workflow or behavior is expected</li>
+                        <li>The change does not require set up or adjustment by Administrators</li>
+                        <li>The change in the database is minimal and should not impact any other price tags</li>
+                        <ul>Potential Impact Areas:</ul>
+                        <li>Shopping Cart</li>
+                        <li>Price Tags</li>
+                        <ul>Mitigation Plan:</ul>
+                        <li>User Manuals: An update is not required because the change restores previous behavior.</li>
+                        <li>Testing: User impact testing is not required due to low impact.</li>
+                        <ul>Assessment:</ul>
+                        <li>This was assessed as MINIMAL because the impact of the fix is much lower than that of the original defect.  The issue blocked users from checking out, but the fix restores behavior so that check out for impacted users will simply work now.  Users will not need to change their processes to check out, no longer need the workaround, and the Heart Monitor price is consistent with the catalog price - expected price.</li>
+                    </td>
+                </tr>
+            </table>
+        </content>
+        <section> 
+            <h3>Scenario Information</h3>
+            <p class="info">An imaginary company 'Fill MEDS' sells medical supplies conveniently through their website to private hospitals, and their website has a listing of various products with variations in size or measurements depending on the need, a reporting tool that exports past orders to help hospitals keep track of what they use the most of over time, and a shopping cart to purchase the items.</p>
+            <p class="info">The imaginary company Fill MEDS has a release coming up with two enhancements and one bug fix.  The release identifier is x.y.z where x is major release, y is minor release, and z is emergency bug fix.  The identifier for the upcoming release is 2.1.0.</p>
+        </section>
+    </div>
+        <footer><p>Angela Reedy Resume 2017</p></footer>
+    </body>
+</html>
