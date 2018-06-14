@@ -9,7 +9,7 @@ p {font-family: 'Cabin', sans-serif; font-size: 12px; line-height: 8px; text-ali
 .fc section p {font-family: 'Cabin', sans-serif; color: #fbfbfb; line-height: 23px; font-size: 14px;}
 .fc content ul,ol {font-family: 'Cabin', sans-serif; font-size: 14px; line-height: 20px;}
 .fc section ol {font-family: 'Cabin', sans-serif; text-align: left; color: #fbfbfb;}
-header h1 {font-family: 'Play', sans-serif; color: #fbfbfb; font-size: 40px;}
+header h1 {font-family: 'Play', sans-serif; color: #fbfbfb; font-size: 40px; margin: 0.37em;}
 .fc content h1 {font-family: 'Play', sans-serif; color: #d15235; font-size: 26px; text-align: center;}
 .fc content p {font-family: 'Cabin', sans-serif; font-size: 12px; line-height: 8px; text-align: center;}
 .fc content h2 {font-family: 'Play', sans-serif; color: #d15235; font-size: 20px;}
@@ -19,9 +19,36 @@ header h1 {font-family: 'Play', sans-serif; color: #fbfbfb; font-size: 40px;}
 footer {font-family: 'Play', sans-serif;}
 .fc content .reg {font-family: 'Cabin', sans-serif; font-size: 14px; text-align: left; padding-left: 20px; line-height: inherit;}
 .info {font-family: 'Cabin', sans-serif; text-align: left;}
-.fc div.desc {padding: 15px; font-family: 'Play', sans-serif; color: #551242; text-align: center; font-size: 12px; text-align: left; background-color: white;}
+.desc {margin-top: 2px; font-family: 'Play', sans-serif; color: #551242; font-size: 12px; text-align: left;}
 hr {display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: auto; margin-right: auto; border-style: inset; border-width: 1px;}
 table {font-family: 'Play', sans-serif; font-size: 14px;}
+
+
+/*GALLERY*/
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+.responsive-image {
+  max-width: 2rem;
+}
+	.grid {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	}
+	
+  .cell img {display: block;}
+
+  .cell {
+    width: calc(100% / 4);
+	margin: 2rem;
+  }
+  .cell2 {
+	  width: calc(25% - 2rem);
+	  margin: 2rem;
+  }
 
         .fc > *{
             margin:5px;
@@ -36,11 +63,9 @@ table {font-family: 'Play', sans-serif; font-size: 14px;}
         
         .fc content {
             flex:3;
-            /*background-image: url(images/sky.jpg);
-            background-size:cover;*/
             background-color: #fbfbe0;
             width: inherit;
-            height: 37em;
+            height: 46em;
             overflow: auto;
         }
 
@@ -51,12 +76,6 @@ table {font-family: 'Play', sans-serif; font-size: 14px;}
         th {background-color: lightgrey; text-align: left;}
         th, td {padding:5px; vertical-align: top;}
 
-/*GALLERY on TRAIN PAGE*/
-        .fc div.gallery {margin: 5px; border: 1px solid #551242; float: left; width:180px; background-color: white;}
-        .fc div.gallery:hover {border: 1px solid #d15235;}
-        .fc div.gallery img {width: 100%; height:auto;}
-        ul.tc {list-style-type: none; margin: 0; padding: 0;}
-
 /*NAVIGATION BAR*/
         .fc aside {flex: 0.5; background-image: url(images/purple.png); background-size: cover; background-color: #551242;}
         
@@ -66,9 +85,11 @@ table {font-family: 'Play', sans-serif; font-size: 14px;}
         .nav {list-style-type: none; margin: 0; padding: 0; width: inherit; height: inherit; overflow:auto;}
         
         li a{font-family: 'Play', sans-serif; line-height: 20px; display: block; color: #fbfbfb; padding: 8px 16px; text-decoration: none; text-align: center;}
+		ul.tc {list-style-type: none; margin: 0; padding: 0;}
+
         
 /*RIGHT SIDE PANEL*/
-        .fc section {background-color: #551242; font-size: 14px; text-align: center; width: inherit; height: 42.5em; overflow: auto;}
+        .fc section {background-color: #551242; font-size: 14px; text-align: center; overflow: auto;}
         .fc section img {border: 1px solid white; overflow: hidden; max-height: 40%; max-width: 60%;}
 
 /*HEADER AND FOOTER*/
@@ -76,20 +97,18 @@ table {font-family: 'Play', sans-serif; font-size: 14px;}
         /* size header and footer to be full width and 100 px tall each */
         header{
             box-sizing: border-box;
-            width: 98vw;
-            height: 100px;
+            height: 50px;
             margin:5px;
             padding:2px; 
             background-color:#142950;
             border-radius: 5px;
             padding-left: 10%;
-            padding-bottom: 7%;
+            padding-bottom: 4%;
             color: #fbfbfb;
         }
     
         footer {
             box-sizing: border-box;
-            width: 98vw;
             height: 35px;
             margin:5px;
             padding:2px; 
