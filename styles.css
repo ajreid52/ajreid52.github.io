@@ -9,19 +9,19 @@ font-family: 'Play', sans-serif;
 font-family: 'Rajdhani', sans-serif;
 font-family: 'Advent Pro', sans-serif;*/
 
-a {color: #ca5a7c;}
+a {color: #ffff66;}
 figcaption {display: block; font-family: 'Play', sans-serif; font-size: 12px; font-style: italic; color: #cccccc;}
 p {font-family: 'Asap', sans-serif; font-size: 12px; line-height: 8px; text-align: center; color: #cccccc;}
 .fc section p {font-family: 'Cairo', sans-serif; color: #cccccc; line-height: 23px; font-size: 14px;}
 .fc content ul,ol {font-family: 'Cairo', sans-serif; font-size: 14px; line-height: 20px; color: #cccccc;}
 .fc section ol {font-family: 'Cairo', sans-serif; text-align: left; color: #cccccc; }
-header h1 {font-family: 'Advent Pro', sans-serif; color: #c3073f; font-size: 40px; margin: 0.37em;}
-.fc content h1 {font-family: 'Advent Pro', sans-serif; color: #c3073f; font-size: 26px; text-align: center;}
+header h1 {font-family: 'Advent Pro', sans-serif; color: #cccccc; font-size: 40px; margin: 0.37em;}
+.fc content h1 {font-family: 'Advent Pro', sans-serif; color: #86c232; font-size: 26px; text-align: center;}
 .fc content p {font-family: 'Asap', sans-serif; font-size: 12px; line-height: 8px; text-align: center; }
-.fc content h2 {font-family: 'Cairo', sans-serif; color: #c3073f; font-size: 20px;}
-.fc content h3 {font-family: 'Asap', sans-serif; color: #950740; font-size: 14px; line-height: inherit;}
-.fc section h3 {font-family: 'Cairo', sans-serif; color: #c3073f; font-size: 20px;}
-.fc content h4 {font-family: 'Cairo', sans-serif; color: #950740; font-size: 14px; font-style: italic; line-height: 8px;}
+.fc content h2 {font-family: 'Cairo', sans-serif; color: #86c232; font-size: 20px;}
+.fc content h3 {font-family: 'Asap', sans-serif; color: #61892f; font-size: 14px; line-height: inherit;}
+.fc section h3 {font-family: 'Cairo', sans-serif; color: #86c232; font-size: 20px;}
+.fc content h4 {font-family: 'Cairo', sans-serif; color: #61892f; font-size: 14px; font-style: italic; line-height: 8px;}
 footer {font-family: 'Cairo', sans-serif;}
 .fc content .reg {font-family: 'Cairo', sans-serif; font-size: 14px; text-align: left; padding-left: 20px; line-height: inherit;}
 .info {font-family: 'Cairo', sans-serif; text-align: left;}
@@ -69,7 +69,7 @@ table {font-family: 'Cairo', sans-serif; font-size: 14px;}
         
         .fc content {
             flex:3;
-            background-color: #1a1a1d;
+            background-color: #222629;
             width: inherit;
             height: 46em;
             overflow: auto;
@@ -82,11 +82,36 @@ table {font-family: 'Cairo', sans-serif; font-size: 14px;}
         th {background-color: lightgrey; text-align: left;}
         th, td {padding:5px; vertical-align: top;}
 
+/*BUTTONS*/
+        .button {
+          margin: 0 auto;
+          float: right;
+        }
+
+
+        .buttongrid {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          }
+          
+          .button img {display: block;}
+
+          .buttoncell {
+            width: calc(25% / 4);
+            margin: 2rem;
+            opacity: 0.6;
+            transition: 0.3s;
+            cursor: pointer;
+            }
+
+          .buttoncell:hover {opacity: 1}
+
 /*NAVIGATION BAR*/
-        .fc aside {flex: 0.5; background-image: url(images/purple.png); background-size: cover; background-color: #4e4e50;}
+        .fc aside {flex: 0.5; /*background-image: url(images/purple.png);*/ background-size: cover; background-color: #474b4f;}
         
-        li a.active {background-color: #6f2232; color: #cccccc;} 
-        li a:hover:not(.active) {background-color: #950740; color: #cccccc;}
+        li a.active {background-color: #61892f; color: #fff;} 
+        li a:hover:not(.active) {background-color: #86c232; color: #fff;}
         
         .nav {list-style-type: none; margin: 0; padding: 0; width: inherit; height: inherit; overflow:auto;}
         
@@ -99,14 +124,14 @@ table {font-family: 'Cairo', sans-serif; font-size: 14px;}
         .fc section img {border: 1px solid white; overflow: hidden; max-height: 40%; max-width: 60%;}
 
 /*HEADER AND FOOTER*/
-        header {border-bottom: 10px solid #6f2232; padding-bottom: 10px;}
+        header {border-bottom: 10px solid #86c232; padding-bottom: 10px;}
         /* size header and footer to be full width and 100 px tall each */
         header{
             box-sizing: border-box;
             height: 50px;
             margin:5px;
             padding:2px; 
-            background-color:#1a1a1d;
+            background-color:#222629;
             border-radius: 5px;
             padding-left: 10%;
             padding-bottom: 4%;
@@ -118,7 +143,7 @@ table {font-family: 'Cairo', sans-serif; font-size: 14px;}
             height: 35px;
             margin:5px;
             padding:2px; 
-            background-color:#6f2232;
+            background-color:#474b4f;
             border-radius: 5px;
             padding-bottom: 2%;
             color: #cccccc;

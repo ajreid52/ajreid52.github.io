@@ -1,0 +1,17 @@
+Dark Green
+61892f
+
+Light Green
+86c232
+
+Blackish
+222629
+
+Dark Gray
+474b4f
+
+Light Gray
+6b6e70
+
+yellowgreen hyperlinks
+ffff66
