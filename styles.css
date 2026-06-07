@@ -10,24 +10,24 @@ font-family: 'Rajdhani', sans-serif;
 font-family: 'Advent Pro', sans-serif;*/
 
 a {color: #ffff66;}
-figcaption {display: block; font-family: 'Play', sans-serif; font-size: 12px; font-style: italic; color: #cccccc;}
-p {font-family: 'Asap', sans-serif; font-size: 12px; line-height: 8px; text-align: center; color: #cccccc;}
-.fc section p {font-family: 'Cairo', sans-serif; color: #cccccc; line-height: 23px; font-size: 14px;}
-.fc content ul,ol {font-family: 'Cairo', sans-serif; font-size: 14px; line-height: 20px; color: #cccccc;}
+figcaption {display: block; font-family: 'Play', sans-serif; font-size: 0.75rem; font-style: italic; color: #cccccc;}
+p {font-family: 'Asap', sans-serif; font-size: 0.875rem; line-height: 1.5; text-align: center; color: #cccccc;}
+.fc section p {font-family: 'Cairo', sans-serif; color: #cccccc; line-height: 1.5; font-size: 0.9rem;}
+.fc main ul, .fc main ol {font-family: 'Cairo', sans-serif; font-size: 0.9rem; line-height: 1.5; color: #cccccc;}
 .fc section ol {font-family: 'Cairo', sans-serif; text-align: left; color: #cccccc; }
 header h1 {font-family: 'Advent Pro', sans-serif; color: #cccccc; font-size: 40px; margin: 0.37em;}
-.fc content h1 {font-family: 'Advent Pro', sans-serif; color: #86c232; font-size: 26px; text-align: center;}
-.fc content p {font-family: 'Asap', sans-serif; font-size: 12px; line-height: 8px; text-align: center; }
-.fc content h2 {font-family: 'Cairo', sans-serif; color: #86c232; font-size: 20px;}
-.fc content h3 {font-family: 'Asap', sans-serif; color: #61892f; font-size: 14px; line-height: inherit;}
+.fc main h1 {font-family: 'Advent Pro', sans-serif; color: #86c232; font-size: 26px; text-align: center;}
+.fc main p {font-family: 'Asap', sans-serif; font-size: 0.875rem; line-height: 1.5; text-align: center; }
+.fc main h2 {font-family: 'Cairo', sans-serif; color: #86c232; font-size: 20px;}
+.fc main h3 {font-family: 'Asap', sans-serif; color: #61892f; font-size: 0.95rem; line-height: 1.35;}
 .fc section h3 {font-family: 'Cairo', sans-serif; color: #86c232; font-size: 20px;}
-.fc content h4 {font-family: 'Cairo', sans-serif; color: #61892f; font-size: 14px; font-style: italic; line-height: 8px;}
+.fc main h4 {font-family: 'Cairo', sans-serif; color: #61892f; font-size: 0.95rem; font-style: italic; line-height: 1.35;}
 footer {font-family: 'Cairo', sans-serif;}
-.fc content .reg {font-family: 'Cairo', sans-serif; font-size: 14px; text-align: left; padding-left: 20px; line-height: inherit;}
+.fc main .reg {font-family: 'Cairo', sans-serif; font-size: 0.9rem; text-align: left; padding-left: 20px; line-height: 1.5;}
 .info {font-family: 'Cairo', sans-serif; text-align: left;}
-.desc {margin-top: 2px; font-family: 'Asap', sans-serif; color: #cccccc; font-size: 12px; text-align: left;}
+.desc {margin-top: 2px; font-family: 'Asap', sans-serif; color: #cccccc; font-size: 0.8rem; text-align: left; line-height: 1.35;}
 hr {display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: auto; margin-right: auto; border-style: inset; border-width: 1px;}
-table {font-family: 'Cairo', sans-serif; font-size: 14px;}
+table {font-family: 'Cairo', sans-serif; font-size: 0.875rem;}
 
 
 /*GALLERY*/
@@ -67,7 +67,7 @@ table {font-family: 'Cairo', sans-serif; font-size: 14px;}
         .fc {display: flex; flex-flow: row wrap; min-height: calc(100vh - 193px);}
             /* ensure flex-container is always at least as tall as the viewport, minus the height of the header and footer combined. */
         
-        .fc content {
+        .fc main {
             flex:3;
             background-color: #222629;
             width: inherit;
@@ -120,7 +120,7 @@ table {font-family: 'Cairo', sans-serif; font-size: 14px;}
 
         
 /*RIGHT SIDE PANEL*/
-        .fc section {background-color: #4e4e50; font-size: 14px; text-align: center; overflow: auto;}
+        .fc section {background-color: #4e4e50; font-size: 0.875rem; text-align: center; overflow: auto;}
         .fc section img {border: 1px solid white; overflow: hidden; max-height: 40%; max-width: 60%;}
 
 /*HEADER AND FOOTER*/
